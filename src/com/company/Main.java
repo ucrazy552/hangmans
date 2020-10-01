@@ -6,5 +6,10 @@ public class Main {
         System.out.println("Fuck uFF");
         System.out.println("hELLO my name is Roy");
         System.out.println("TOMAS");
+        System.out.println("New");
+        lol();
+    }
+    public static  void lol() {
+        System.out.println("Hello");
     }
 }
