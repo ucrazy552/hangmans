@@ -4,14 +4,14 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Game {
-
+    boolean inGame = false;
     //string van woorden maken
     public static String[] words = {"Mercedes ", "Ferrari", "RedBull", "Renault", "HAAS", "AlfaRomeo"};
 
-    public static int randString(){
+    public static int getRand(int words[]){
         Random rand = new Random();
         int res = rand.nextInt(words.length);
-        return res;
+        return words[res];
     }
 
 
