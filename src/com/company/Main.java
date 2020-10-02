@@ -14,6 +14,5 @@ public class Main {
     public static  void lol() {
         Game maker = new Game();
         maker.input();
-        maker.getr
     }
 }
