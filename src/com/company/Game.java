@@ -15,6 +15,11 @@ public class Game {
         return words[res];
     }
 
+    public void showWord() {
+        System.out.println(getRand(words));
+    }
+
+
 
     public void input() {
         //maken van scanner object
@@ -24,7 +29,6 @@ public class Game {
         String userInput = myobj.nextLine();
         System.out.println(userInput);
         System.out.println(getRand(words));
-
     }
 
 }
