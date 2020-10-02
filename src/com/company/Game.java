@@ -9,20 +9,18 @@ public class Game {
     public static String[] words = {"Mercedes ", "Ferrari", "RedBull", "Renault", "HAAS", "AlfaRomeo"};
 
 
-    public static String getRandom(String[] array) {
-        int rnd = (int)(Math.random()*array.length);
-        return array[rnd];
+    public static String getRand(String words[]){
+        Random rand = new Random();
+        int res = rand.nextInt(words.length);
+        return words[res];
     }
 
-    public void displayWord() {
-        System.out.println(getRandom(words));
-    }
 
     public void input() {
         //maken van scanner object
         Scanner myobj = new Scanner(System.in);
         System.out.println("Welcome to HangMan!");
-        displayWord();
+        System.out.println(getRand(words));
 
     }
 
