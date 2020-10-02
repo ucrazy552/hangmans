@@ -8,18 +8,21 @@ public class Game {
     //string van woorden maken
     public static String[] words = {"Mercedes ", "Ferrari", "RedBull", "Renault", "HAAS", "AlfaRomeo"};
 
-    public static int getRand(int words[]){
-        Random rand = new Random();
-        int res = rand.nextInt(words.length);
-        return words[res];
+
+    public static String getRandom(String[] array) {
+        int rnd = (int)(Math.random()*array.length);
+        return array[rnd];
     }
 
+    public void displayWord() {
+        System.out.println(getRandom(words));
+    }
 
     public void input() {
         //maken van scanner object
         Scanner myobj = new Scanner(System.in);
         System.out.println("Welcome to HangMan!");
-        System.out.println(randString());
+        displayWord();
 
     }
 
