@@ -20,6 +20,9 @@ public class Game {
         //maken van scanner object
         Scanner myobj = new Scanner(System.in);
         System.out.println("Welcome to HangMan!");
+
+        String userInput = myobj.nextLine();
+        System.out.println(userInput);
         System.out.println(getRand(words));
 
     }
