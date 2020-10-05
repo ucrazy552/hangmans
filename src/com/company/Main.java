@@ -11,9 +11,19 @@ public class Main {
 
 
     }
-    public static  void lol() {
-        Game maker = new Game();
-        maker.input();
+    public static String[] words = {"Mercedes", "Ferrari", "RedBull", "Renault", "HAAS", "AlfaRomeo"};
 
+
+
+    public static  void lol() {
+
+        Game maker = new Game();
+        String goedeWoord = maker.getRand(words);
+        System.out.println(goedeWoord);
+        System.out.println("Welcome to HangMan!\nYou got 5 chances\n");
+        maker.input(goedeWoord);
+        //maker.printDash();
     }
+
+
 }

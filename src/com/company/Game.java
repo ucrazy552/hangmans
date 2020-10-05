@@ -4,31 +4,49 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Game {
-    boolean inGame = false;
+
+    Scanner myobj = new Scanner(System.in);
+    boolean getWin = false;
+    int lives = 0;
+
     //string van woorden maken
-    public static String[] words = {"Mercedes ", "Ferrari", "RedBull", "Renault", "HAAS", "AlfaRomeo"};
+
 
 
     public static String getRand(String words[]){
         Random rand = new Random();
         int res = rand.nextInt(words.length);
-        return words[res];
+        String random = (words[res]);
+
+        return random;
     }
 
-    public void showWord() {
-        System.out.println(getRand(words));
-    }
 
 
 
-    public void input() {
+    public void input(String goedeWoord) {
         //maken van scanner object
-        Scanner myobj = new Scanner(System.in);
-        System.out.println("Welcome to HangMan!");
-
+        System.out.println("Put in your letter:");
         String userInput = myobj.nextLine();
-        System.out.println(userInput);
-        System.out.println(getRand(words));
+        //char[] charArray = {goedeWoord.charAt(goedeWoord.length())};
+        //System.out.println(charArray);
+
+        if (userInput.equals(goedeWoord)){
+            this.getWin = true;
+            System.out.println("WINNER!");
+            System.exit(0);
+        } else {
+            lives++;
+            System.out.println("FOUTEN = " + lives);
+            if (lives == 5){
+                System.out.println("YOU LOST THE GAME!\nThe Word Was:");
+                System.out.println(goedeWoord);
+                System.exit(0);
+            }
+        }
+        input(goedeWoord);
+
     }
+
 
 }
