@@ -27,11 +27,26 @@ public class Game {
     public void input(String goedeWoord) {
         //maken van scanner object
         System.out.println("Put in your letter:");
-        String userInput = myobj.nextLine();
-        //char[] charArray = {goedeWoord.charAt(goedeWoord.length())};
-        //System.out.println(charArray);
+        //pakken van user input met char
+        char userInput = myobj.next().charAt(0);
 
-        if (userInput.equals(goedeWoord)){
+
+        //maken van char array
+        char[] charWoord = new char[goedeWoord.length()];
+
+        //plaatsen in array
+        for (int i = 0; i < goedeWoord.length(); i++){
+            charWoord[i] = goedeWoord.charAt(i);
+        }
+
+        for (char c : charWoord) {
+            System.out.printf("_");
+        }
+
+
+
+
+        if (true){
             this.getWin = true;
             System.out.println("WINNER!");
             System.exit(0);

@@ -4,8 +4,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Poppetje pop = new Poppetje();
-        pop.lol();
+        //Poppetje pop = new Poppetje();
+        //pop.lol();
         lol();
 
 
